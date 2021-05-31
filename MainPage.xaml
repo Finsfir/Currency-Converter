@@ -24,15 +24,17 @@
 
             <Grid x:Name="Area" Visibility="Collapsed">
                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7FD;" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,57,0,60"/>
-                <TextBlock x:Name="LeftCurrencyName" HorizontalAlignment="Left" Margin="52,60,0,0" Text="{Binding leftCurrencyChoose.TargetCurrency.CharCode}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" SelectionHighlightColor="{x:Null}"/>
-                <TextBlock x:Name="RightCurrencyName" HorizontalAlignment="Right" Margin="0,60,52,0" Text="{Binding rightCurrencyChoose.TargetCurrency.CharCode}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"/>
-                <TextBox x:Name="LeftCurrency" HorizontalAlignment="Left" Margin="45,20,0,0" Text="cur1" TextWrapping="Wrap" VerticalAlignment="Top" Background="{x:Null}"/>
-                <TextBox x:Name="RightCurrency" HorizontalAlignment="Right" Margin="0,20,45,0" Text="cur2" TextWrapping="Wrap" VerticalAlignment="Top" Background="{x:Null}" SelectionHighlightColor="{x:Null}"/>
+                <TextBlock x:Name="LeftCurrencyName" HorizontalAlignment="Left" Margin="52,60,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" SelectionHighlightColor="{x:Null}"/>
+                <TextBlock x:Name="RightCurrencyName" HorizontalAlignment="Right" Margin="0,60,52,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14"/>
+                <TextBox x:Name="LeftCurrency" HorizontalAlignment="Left" Margin="45,20,0,0" PlaceholderText="000,00" TextWrapping="Wrap" VerticalAlignment="Top"
+                         Background="{x:Null}" TextChanging="LeftCurrency_TextChanged"/>
+                <TextBox x:Name="RightCurrency" HorizontalAlignment="Right" Margin="0,20,45,0" PlaceholderText="000,00" TextWrapping="Wrap" VerticalAlignment="Top"
+                         Background="{x:Null}" TextChanging="RightCurrency_TextChanged"/>
                 <Button Content="Изменить валюту" Name="LeftCurrencyChange" Margin="15,90,0,0" VerticalAlignment="Stretch" Background="{x:Null}" Foreground="#FF0000A0" Click="LeftCurrencyChange_Click"/>
                 <Button Content="Изменить валюту" Name="RightCurrencyChange" Margin="0,90,15,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="134" Background="{x:Null}" Foreground="#FF0000A0" Click="RightCurrencyChange_Click"/>
             </Grid>
         </StackPanel>
-
+        
         <ProgressRing x:Name="LoadingRing" HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="True" Width="60" Height="60" />
     </Grid>
 </Page>

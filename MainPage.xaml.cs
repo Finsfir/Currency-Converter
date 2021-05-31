@@ -23,6 +23,8 @@ namespace Currency_Converter
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private double leftValue = 0;
+        private double rightValue = 0;
 
         public CurrencyChoose leftCurrencyChoose;
         public CurrencyChoose rightCurrencyChoose;
@@ -97,5 +99,29 @@ namespace Currency_Converter
             leftCurrencyChoose = rightCurrencyChoose;
             rightCurrencyChoose = middleCurrencyChoose;
         }
+        private void LeftCurrency_TextChanged(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            int oneDot = 0;
+            sender.Text = new String(sender.Text.Where(c => (char.IsDigit(c) || (c == ',' ? (oneDot++ < 1) : false))).ToArray());
+            leftValue = Convert.ToDouble(sender.Text);
+            if (leftCurrencyChoose.TargetCurrency != null && rightCurrencyChoose.TargetCurrency != null)
+            {
+                rightValue = leftValue / leftCurrencyChoose.TargetCurrency.Value * rightCurrencyChoose.TargetCurrency.Value;
+                RightCurrency.Text = rightValue.ToString();
+            }
+        }
+
+        private void RightCurrency_TextChanged(TextBox sender, TextBoxTextChangingEventArgs e)
+        {
+            int oneDot = 0;
+            sender.Text = new String(sender.Text.Where(c => (char.IsDigit(c) || (c == ',' ? (oneDot++ < 1) : false))).ToArray());
+            rightValue = Convert.ToDouble(sender.Text);
+            if (leftCurrencyChoose.TargetCurrency != null && rightCurrencyChoose.TargetCurrency != null)
+            {
+                leftValue = rightValue * leftCurrencyChoose.TargetCurrency.Value / rightCurrencyChoose.TargetCurrency.Value;
+                LeftCurrency.Text = leftValue.ToString();
+            }
+        }
+
     }
 }
