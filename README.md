@@ -5,7 +5,7 @@ This application demonstrates some simple principles of C# & XAML possibilites i
 \# Installation
 
 - Create project root folder ```mkdir CurConverter```
-- 
+
 - Clone the project repository by running ```git clone https://github.com/Finsfir/Currency-Converter.git ./CurConverter``` from your command line
 
 - Enter project root ```cd CurConverter```
