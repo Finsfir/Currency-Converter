@@ -1,8 +1,8 @@
-\#Currency Converter
+# Currency Converter
 
 This application demonstrates some simple principles of C# & XAML possibilites in Universal Windows Platform.
 
-\#Installation
+# Installation
 
 - Create project root folder ```mkdir CurConverter```
 
@@ -10,7 +10,7 @@ This application demonstrates some simple principles of C# & XAML possibilites i
 
 - Enter project root ```cd CurConverter```
 
-\#Useful Links
+# Useful Links
 
 [UWP workbook](https://metanit.com/sharp/uwp/)
 
