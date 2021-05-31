@@ -92,13 +92,6 @@ namespace Currency_Converter
         {
             rightCurrencyChoose.Visibility = Visibility.Visible;
         }
-
-        private void FontIcon_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            CurrencyChoose middleCurrencyChoose = leftCurrencyChoose;
-            leftCurrencyChoose = rightCurrencyChoose;
-            rightCurrencyChoose = middleCurrencyChoose;
-        }
         private void LeftCurrency_TextChanged(TextBox sender, TextBoxTextChangingEventArgs args)
         {
             int oneDot = 0;

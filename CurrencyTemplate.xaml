@@ -9,7 +9,7 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <StackPanel Margin="10" Tapped="StackPanel_Tapped" Orientation="Horizontal" HorizontalAlignment="Stretch">
+    <StackPanel Margin="10" Orientation="Horizontal">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
                 <VisualState x:Name="Desktop">
@@ -19,6 +19,7 @@
                     <VisualState.Setters>
                         <Setter Target="currencyCode.HorizontalAlignment" Value="Right" />
                         <Setter Target="currencyName.HorizontalAlignment" Value="Left" />
+                        <Setter Target="currencyName.Width" Value="450" />
                         <Setter Target="currencyCode.FontSize" Value="18" />
                         <Setter Target="currencyName.FontSize" Value="16" />
                     </VisualState.Setters>
@@ -30,6 +31,7 @@
                     <VisualState.Setters>
                         <Setter Target="currencyCode.HorizontalAlignment" Value="Right" />
                         <Setter Target="currencyName.HorizontalAlignment" Value="Left" />
+                        <Setter Target="currencyName.Width" Value="220" />
                         <Setter Target="currencyCode.FontSize" Value="16" />
                         <Setter Target="currencyName.FontSize" Value="14" />
                     </VisualState.Setters>
@@ -37,7 +39,7 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
-        <TextBlock Name="currencyName" Text="{x:Bind Cur.Name}" TextWrapping = "WrapWholeWords" VerticalAlignment="Center"/>
-        <TextBlock Name="currencyCode" Text="{x:Bind Cur.CharCode}" FocusVisualPrimaryBrush="Gray" VerticalAlignment="Center"/>
+        <TextBlock Name="currencyName" Text="{x:Bind Cur.Name}" TextWrapping = "WrapWholeWords" TextAlignment="Left" VerticalAlignment="Center"/>
+        <TextBlock Name="currencyCode" Text="{x:Bind Cur.CharCode}" TextAlignment="Right" VerticalAlignment="Center" Foreground="Gray"/>
     </StackPanel>
 </UserControl>

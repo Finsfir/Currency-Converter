@@ -26,9 +26,5 @@ namespace Currency_Converter
             
         }
 
-        private void StackPanel_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-
-        }
     }
 }

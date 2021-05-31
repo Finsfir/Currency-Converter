@@ -10,7 +10,7 @@
     d:DesignWidth="400">
 
     <Grid VerticalAlignment="Stretch">
-        <ScrollViewer HorizontalScrollMode="Disabled" VerticalScrollMode="Enabled" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,40,0,0" Tapped="ScrollViewer_Tapped">
+        <ScrollViewer HorizontalScrollMode="Disabled" VerticalScrollMode="Enabled" Height="350" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0" Tapped="ScrollViewer_Tapped">
             <ScrollViewer.Content>
                 <ListBox Name="CurrencyList" ItemsSource="{x:Bind Currencies}">
                     <ListBox.ItemTemplate>
